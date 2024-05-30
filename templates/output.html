@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+        *{
+            font-family: "Ubuntu Sans", sans-serif;
+        }
+        body {
+            font-family: 'Ubuntu Sans', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 12rem;
+            height: 10rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="data:image/jpeg;base64,{{ base64_image }}" alt="Uploaded Image">
+        </div>
+        <h3>The text read from the image is:</h3>
+        <p>{{ name }}</p>
+    </div>
+</body>
+</html>
